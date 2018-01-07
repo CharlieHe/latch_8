@@ -1,12 +1,21 @@
 |latch_8
-qout[0] <= qout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[1] <= qout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[2] <= qout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[3] <= qout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[4] <= qout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[5] <= qout[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[6] <= qout[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[7] <= qout[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+oe => qout[7]$latch.ACLR
+oe => qout[6]$latch.ACLR
+oe => qout[5]$latch.ACLR
+oe => qout[4]$latch.ACLR
+oe => qout[3]$latch.ACLR
+oe => qout[2]$latch.ACLR
+oe => qout[1]$latch.ACLR
+oe => qout[0]_34.ACLR
+oe => qout[0]$latch.ACLR
+qout[0] <= qout[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~1.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~2.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+qout[4] <= qout[4]~4.DB_MAX_OUTPUT_PORT_TYPE
+qout[5] <= qout[5]~5.DB_MAX_OUTPUT_PORT_TYPE
+qout[6] <= qout[6]~6.DB_MAX_OUTPUT_PORT_TYPE
+qout[7] <= qout[7]~7.DB_MAX_OUTPUT_PORT_TYPE
 data[0] => qout[0]$latch.DATAIN
 data[1] => qout[1]$latch.DATAIN
 data[2] => qout[2]$latch.DATAIN
@@ -22,6 +31,7 @@ clk => qout[4]$latch.LATCH_ENABLE
 clk => qout[3]$latch.LATCH_ENABLE
 clk => qout[2]$latch.LATCH_ENABLE
 clk => qout[1]$latch.LATCH_ENABLE
+clk => qout[0]_34.LATCH_ENABLE
 clk => qout[0]$latch.LATCH_ENABLE
 
 

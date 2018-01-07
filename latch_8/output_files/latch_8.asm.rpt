@@ -1,5 +1,5 @@
 Assembler report for latch_8
-Sun Jan 07 18:06:25 2018
+Mon Jan 08 02:14:43 2018
 Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jan 07 18:06:25 2018 ;
+; Assembler Status      ; Successful - Mon Jan 08 02:14:43 2018 ;
 ; Revision Name         ; latch_8                               ;
 ; Top-level Entity Name ; latch_8                               ;
 ; Family                ; Cyclone III                           ;
@@ -91,7 +91,7 @@ applicable agreement for further details.
 +----------------+-----------------------------------------------------------+
 ; Device         ; EP3C5E144A7                                               ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                ;
-; Checksum       ; 0x00095079                                                ;
+; Checksum       ; 0x000956A7                                                ;
 +----------------+-----------------------------------------------------------+
 
 
@@ -101,14 +101,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
-    Info: Processing started: Sun Jan 07 18:06:23 2018
+    Info: Processing started: Mon Jan 08 02:14:40 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off latch_8 -c latch_8
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 279 megabytes
-    Info: Processing ended: Sun Jan 07 18:06:25 2018
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 278 megabytes
+    Info: Processing ended: Mon Jan 08 02:14:43 2018
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

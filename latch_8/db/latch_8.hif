@@ -30,7 +30,7 @@ ON
 # case_sensitive
 # source_file
 latch_8.v
-181cbcdef193db346e85b3ad5bc
+78583ab571211ab176f9fde284b6811
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
