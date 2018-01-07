@@ -1,12 +1,12 @@
 |latch_8
-qout[0] << qout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[1] << qout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[2] << qout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[3] << qout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[4] << qout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[5] << qout[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[6] << qout[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
-qout[7] << qout[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[0] <= qout[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[4] <= qout[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[5] <= qout[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[6] <= qout[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+qout[7] <= qout[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
 data[0] => qout[0]$latch.DATAIN
 data[1] => qout[1]$latch.DATAIN
 data[2] => qout[2]$latch.DATAIN
@@ -15,13 +15,13 @@ data[4] => qout[4]$latch.DATAIN
 data[5] => qout[5]$latch.DATAIN
 data[6] => qout[6]$latch.DATAIN
 data[7] => qout[7]$latch.DATAIN
-clk => qout[0]$latch.LATCH_ENABLE
-clk => qout[1]$latch.LATCH_ENABLE
-clk => qout[2]$latch.LATCH_ENABLE
-clk => qout[3]$latch.LATCH_ENABLE
-clk => qout[4]$latch.LATCH_ENABLE
-clk => qout[5]$latch.LATCH_ENABLE
-clk => qout[6]$latch.LATCH_ENABLE
 clk => qout[7]$latch.LATCH_ENABLE
+clk => qout[6]$latch.LATCH_ENABLE
+clk => qout[5]$latch.LATCH_ENABLE
+clk => qout[4]$latch.LATCH_ENABLE
+clk => qout[3]$latch.LATCH_ENABLE
+clk => qout[2]$latch.LATCH_ENABLE
+clk => qout[1]$latch.LATCH_ENABLE
+clk => qout[0]$latch.LATCH_ENABLE
 
 

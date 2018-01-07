@@ -5,7 +5,7 @@ the Block Editor! File corruption is VERY likely to occur.
 */
 
 /*
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2009 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -229,9 +229,9 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 100;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 		}
 	}
 }
@@ -250,7 +250,8 @@ TRANSITION_LIST("data[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 640.0;
+		LEVEL 1 FOR 360.0;
 	}
 }
 
@@ -259,7 +260,14 @@ TRANSITION_LIST("data[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+		}
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 40.0;
 	}
 }
 
@@ -268,7 +276,13 @@ TRANSITION_LIST("data[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 160.0;
+		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -277,7 +291,13 @@ TRANSITION_LIST("data[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -286,7 +306,13 @@ TRANSITION_LIST("data[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -295,7 +321,12 @@ TRANSITION_LIST("data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 25;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 	}
 }
 
@@ -304,7 +335,12 @@ TRANSITION_LIST("data[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
 	}
 }
 
@@ -384,7 +420,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = ASCII;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
 }
@@ -483,7 +519,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
 	CHILDREN = 11, 12, 13, 14, 15, 16, 17, 18;
@@ -493,7 +529,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 11;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -503,7 +539,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 12;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -513,7 +549,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -523,7 +559,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -533,7 +569,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 15;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -543,7 +579,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 16;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -553,7 +589,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 17;
 	TREE_LEVEL = 1;
 	PARENT = 10;
@@ -563,7 +599,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "qout[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = ASCII;
 	TREE_INDEX = 18;
 	TREE_LEVEL = 1;
 	PARENT = 10;
