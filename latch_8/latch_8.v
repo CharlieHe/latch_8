@@ -2,10 +2,21 @@ module  		latch_8(qout,data,clk);
 output[7:0] qout;
 input[7:0]  data;
 input  		clk;
+input 		OE;
 reg[7:0]  	qout;
 
 always @(clk or data)
 begin
-	if (clk)  qout<=data;
+if(!OE) 
+begin
+	if (clk) 
+	begin
+		qout<=data;
+	end
+else
+	begin
+		
+	end
+end
 end
 endmodule
