@@ -20,13 +20,13 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("D:/Project/FPGA/exe2/db/exe2.sim.cvwf")
+VECTOR("D:/Project/FPGA/exe2/exe2.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 59469;
-		NUMERATOR = 891;
-		DENOMINATOR = 45600;
+		ZEND = 68350;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -199,13 +199,13 @@ VECTOR("D:/Project/FPGA/exe2/db/exe2.sim.cvwf")
 	}
 }
 
-VECTOR("D:/Project/FPGA/exe2/exe2.vwf")
+VECTOR("D:/Project/FPGA/exe2/db/exe2.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 68350;
-		NUMERATOR = 20;
-		DENOMINATOR = 1000;
+		ZEND = 59469;
+		NUMERATOR = 891;
+		DENOMINATOR = 45600;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
