@@ -1,0 +1,22 @@
+module shift_reg(dir,m,d_in,clk,load,clr,out);
+input dir,m;
+input[7:0] d_in;
+input clk,load,clr;
+output[7:0] out;
+reg[7:0] out;
+always@(posedge clk or posedge load or negedge clr)
+begin
+	if(load)	out <= d_in;
+	else if(!clr)	out <=8'b00000000;
+	else if(dir)		//SHL
+	begin
+		out <= out<<1;
+		out[0] <= m;
+	end
+	else if(!dir)		//SHR
+	begin				
+		out <= out>>1;
+		out[7] <= m;
+	end
+end
+endmodule

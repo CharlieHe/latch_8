@@ -1,0 +1,36 @@
+|counter
+in[0] => out~7.DATAB
+in[1] => out~6.DATAB
+in[2] => out~5.DATAB
+in[3] => out~4.DATAB
+in[4] => out~3.DATAB
+in[5] => out~2.DATAB
+in[6] => out~1.DATAB
+in[7] => out~0.DATAB
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => out[7]~reg0.CLK
+clk => out[6]~reg0.CLK
+clk => out[5]~reg0.CLK
+clk => out[4]~reg0.CLK
+clk => out[3]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[0]~reg0.CLK
+reset => always0~0.IN1
+load => out~7.OUTPUTSELECT
+load => out~6.OUTPUTSELECT
+load => out~5.OUTPUTSELECT
+load => out~4.OUTPUTSELECT
+load => out~3.OUTPUTSELECT
+load => out~2.OUTPUTSELECT
+load => out~1.OUTPUTSELECT
+load => out~0.OUTPUTSELECT
+
+
