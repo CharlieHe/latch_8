@@ -1,0 +1,928 @@
+// Copyright (C) 1991-2009 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 9.0 Build 132 02/25/2009 SJ Web Edition"
+
+// DATE "10/25/2017 14:18:28"
+
+// 
+// Device: Altera EP1C3T144C8 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Reg8 (
+	qout,
+	in,
+	clk,
+	clear);
+output 	[7:0] qout;
+input 	[7:0] in;
+input 	clk;
+input 	clear;
+
+wire gnd = 1'b0;
+wire vcc = 1'b1;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("Reg8_v.sdo");
+// synopsys translate_on
+
+wire \clk~combout ;
+wire \clear~combout ;
+wire \qout[0]~reg0_regout ;
+wire \qout[1]~reg0_regout ;
+wire \qout[2]~reg0_regout ;
+wire \qout[3]~reg0_regout ;
+wire \qout[4]~reg0_regout ;
+wire \qout[5]~reg0_regout ;
+wire \qout[6]~reg0_regout ;
+wire \qout[7]~reg0_regout ;
+wire [7:0] \in~combout ;
+
+
+// atom is at PIN_17
+cyclone_io \clk~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\clk~combout ),
+	.regout(),
+	.padio(clk));
+// synopsys translate_off
+defparam \clk~I .input_async_reset = "none";
+defparam \clk~I .input_power_up = "low";
+defparam \clk~I .input_register_mode = "none";
+defparam \clk~I .input_sync_reset = "none";
+defparam \clk~I .oe_async_reset = "none";
+defparam \clk~I .oe_power_up = "low";
+defparam \clk~I .oe_register_mode = "none";
+defparam \clk~I .oe_sync_reset = "none";
+defparam \clk~I .operation_mode = "input";
+defparam \clk~I .output_async_reset = "none";
+defparam \clk~I .output_power_up = "low";
+defparam \clk~I .output_register_mode = "none";
+defparam \clk~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_83
+cyclone_io \in[0]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [0]),
+	.regout(),
+	.padio(in[0]));
+// synopsys translate_off
+defparam \in[0]~I .input_async_reset = "none";
+defparam \in[0]~I .input_power_up = "low";
+defparam \in[0]~I .input_register_mode = "none";
+defparam \in[0]~I .input_sync_reset = "none";
+defparam \in[0]~I .oe_async_reset = "none";
+defparam \in[0]~I .oe_power_up = "low";
+defparam \in[0]~I .oe_register_mode = "none";
+defparam \in[0]~I .oe_sync_reset = "none";
+defparam \in[0]~I .operation_mode = "input";
+defparam \in[0]~I .output_async_reset = "none";
+defparam \in[0]~I .output_power_up = "low";
+defparam \in[0]~I .output_register_mode = "none";
+defparam \in[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_16
+cyclone_io \clear~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\clear~combout ),
+	.regout(),
+	.padio(clear));
+// synopsys translate_off
+defparam \clear~I .input_async_reset = "none";
+defparam \clear~I .input_power_up = "low";
+defparam \clear~I .input_register_mode = "none";
+defparam \clear~I .input_sync_reset = "none";
+defparam \clear~I .oe_async_reset = "none";
+defparam \clear~I .oe_power_up = "low";
+defparam \clear~I .oe_register_mode = "none";
+defparam \clear~I .oe_sync_reset = "none";
+defparam \clear~I .operation_mode = "input";
+defparam \clear~I .output_async_reset = "none";
+defparam \clear~I .output_power_up = "low";
+defparam \clear~I .output_register_mode = "none";
+defparam \clear~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X20_Y6_N2
+cyclone_lcell \qout[0]~reg0 (
+// Equation(s):
+// \qout[0]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [0], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [0]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[0]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[0]~reg0 .lut_mask = "0000";
+defparam \qout[0]~reg0 .operation_mode = "normal";
+defparam \qout[0]~reg0 .output_mode = "reg_only";
+defparam \qout[0]~reg0 .register_cascade_mode = "off";
+defparam \qout[0]~reg0 .sum_lutc_input = "datac";
+defparam \qout[0]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_32
+cyclone_io \in[1]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [1]),
+	.regout(),
+	.padio(in[1]));
+// synopsys translate_off
+defparam \in[1]~I .input_async_reset = "none";
+defparam \in[1]~I .input_power_up = "low";
+defparam \in[1]~I .input_register_mode = "none";
+defparam \in[1]~I .input_sync_reset = "none";
+defparam \in[1]~I .oe_async_reset = "none";
+defparam \in[1]~I .oe_power_up = "low";
+defparam \in[1]~I .oe_register_mode = "none";
+defparam \in[1]~I .oe_sync_reset = "none";
+defparam \in[1]~I .operation_mode = "input";
+defparam \in[1]~I .output_async_reset = "none";
+defparam \in[1]~I .output_power_up = "low";
+defparam \in[1]~I .output_register_mode = "none";
+defparam \in[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X1_Y3_N2
+cyclone_lcell \qout[1]~reg0 (
+// Equation(s):
+// \qout[1]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [1], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [1]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[1]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[1]~reg0 .lut_mask = "0000";
+defparam \qout[1]~reg0 .operation_mode = "normal";
+defparam \qout[1]~reg0 .output_mode = "reg_only";
+defparam \qout[1]~reg0 .register_cascade_mode = "off";
+defparam \qout[1]~reg0 .sum_lutc_input = "datac";
+defparam \qout[1]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_62
+cyclone_io \in[2]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [2]),
+	.regout(),
+	.padio(in[2]));
+// synopsys translate_off
+defparam \in[2]~I .input_async_reset = "none";
+defparam \in[2]~I .input_power_up = "low";
+defparam \in[2]~I .input_register_mode = "none";
+defparam \in[2]~I .input_sync_reset = "none";
+defparam \in[2]~I .oe_async_reset = "none";
+defparam \in[2]~I .oe_power_up = "low";
+defparam \in[2]~I .oe_register_mode = "none";
+defparam \in[2]~I .oe_sync_reset = "none";
+defparam \in[2]~I .operation_mode = "input";
+defparam \in[2]~I .output_async_reset = "none";
+defparam \in[2]~I .output_power_up = "low";
+defparam \in[2]~I .output_register_mode = "none";
+defparam \in[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X20_Y1_N2
+cyclone_lcell \qout[2]~reg0 (
+// Equation(s):
+// \qout[2]~reg0_regout  = DFFEAS(\in~combout [2], GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , , , , )
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\in~combout [2]),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[2]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[2]~reg0 .lut_mask = "ff00";
+defparam \qout[2]~reg0 .operation_mode = "normal";
+defparam \qout[2]~reg0 .output_mode = "reg_only";
+defparam \qout[2]~reg0 .register_cascade_mode = "off";
+defparam \qout[2]~reg0 .sum_lutc_input = "datac";
+defparam \qout[2]~reg0 .synch_mode = "off";
+// synopsys translate_on
+
+// atom is at PIN_105
+cyclone_io \in[3]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [3]),
+	.regout(),
+	.padio(in[3]));
+// synopsys translate_off
+defparam \in[3]~I .input_async_reset = "none";
+defparam \in[3]~I .input_power_up = "low";
+defparam \in[3]~I .input_register_mode = "none";
+defparam \in[3]~I .input_sync_reset = "none";
+defparam \in[3]~I .oe_async_reset = "none";
+defparam \in[3]~I .oe_power_up = "low";
+defparam \in[3]~I .oe_register_mode = "none";
+defparam \in[3]~I .oe_sync_reset = "none";
+defparam \in[3]~I .operation_mode = "input";
+defparam \in[3]~I .output_async_reset = "none";
+defparam \in[3]~I .output_power_up = "low";
+defparam \in[3]~I .output_register_mode = "none";
+defparam \in[3]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X1_Y13_N2
+cyclone_lcell \qout[3]~reg0 (
+// Equation(s):
+// \qout[3]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [3], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [3]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[3]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[3]~reg0 .lut_mask = "0000";
+defparam \qout[3]~reg0 .operation_mode = "normal";
+defparam \qout[3]~reg0 .output_mode = "reg_only";
+defparam \qout[3]~reg0 .register_cascade_mode = "off";
+defparam \qout[3]~reg0 .sum_lutc_input = "datac";
+defparam \qout[3]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_84
+cyclone_io \in[4]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [4]),
+	.regout(),
+	.padio(in[4]));
+// synopsys translate_off
+defparam \in[4]~I .input_async_reset = "none";
+defparam \in[4]~I .input_power_up = "low";
+defparam \in[4]~I .input_register_mode = "none";
+defparam \in[4]~I .input_sync_reset = "none";
+defparam \in[4]~I .oe_async_reset = "none";
+defparam \in[4]~I .oe_power_up = "low";
+defparam \in[4]~I .oe_register_mode = "none";
+defparam \in[4]~I .oe_sync_reset = "none";
+defparam \in[4]~I .operation_mode = "input";
+defparam \in[4]~I .output_async_reset = "none";
+defparam \in[4]~I .output_power_up = "low";
+defparam \in[4]~I .output_register_mode = "none";
+defparam \in[4]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X21_Y5_N2
+cyclone_lcell \qout[4]~reg0 (
+// Equation(s):
+// \qout[4]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [4], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [4]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[4]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[4]~reg0 .lut_mask = "0000";
+defparam \qout[4]~reg0 .operation_mode = "normal";
+defparam \qout[4]~reg0 .output_mode = "reg_only";
+defparam \qout[4]~reg0 .register_cascade_mode = "off";
+defparam \qout[4]~reg0 .sum_lutc_input = "datac";
+defparam \qout[4]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_42
+cyclone_io \in[5]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [5]),
+	.regout(),
+	.padio(in[5]));
+// synopsys translate_off
+defparam \in[5]~I .input_async_reset = "none";
+defparam \in[5]~I .input_power_up = "low";
+defparam \in[5]~I .input_register_mode = "none";
+defparam \in[5]~I .input_sync_reset = "none";
+defparam \in[5]~I .oe_async_reset = "none";
+defparam \in[5]~I .oe_power_up = "low";
+defparam \in[5]~I .oe_register_mode = "none";
+defparam \in[5]~I .oe_sync_reset = "none";
+defparam \in[5]~I .operation_mode = "input";
+defparam \in[5]~I .output_async_reset = "none";
+defparam \in[5]~I .output_power_up = "low";
+defparam \in[5]~I .output_register_mode = "none";
+defparam \in[5]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X6_Y1_N2
+cyclone_lcell \qout[5]~reg0 (
+// Equation(s):
+// \qout[5]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [5], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [5]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[5]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[5]~reg0 .lut_mask = "0000";
+defparam \qout[5]~reg0 .operation_mode = "normal";
+defparam \qout[5]~reg0 .output_mode = "reg_only";
+defparam \qout[5]~reg0 .register_cascade_mode = "off";
+defparam \qout[5]~reg0 .sum_lutc_input = "datac";
+defparam \qout[5]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_106
+cyclone_io \in[6]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [6]),
+	.regout(),
+	.padio(in[6]));
+// synopsys translate_off
+defparam \in[6]~I .input_async_reset = "none";
+defparam \in[6]~I .input_power_up = "low";
+defparam \in[6]~I .input_register_mode = "none";
+defparam \in[6]~I .input_sync_reset = "none";
+defparam \in[6]~I .oe_async_reset = "none";
+defparam \in[6]~I .oe_power_up = "low";
+defparam \in[6]~I .oe_register_mode = "none";
+defparam \in[6]~I .oe_sync_reset = "none";
+defparam \in[6]~I .operation_mode = "input";
+defparam \in[6]~I .output_async_reset = "none";
+defparam \in[6]~I .output_power_up = "low";
+defparam \in[6]~I .output_register_mode = "none";
+defparam \in[6]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X4_Y12_N2
+cyclone_lcell \qout[6]~reg0 (
+// Equation(s):
+// \qout[6]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [6], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [6]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[6]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[6]~reg0 .lut_mask = "0000";
+defparam \qout[6]~reg0 .operation_mode = "normal";
+defparam \qout[6]~reg0 .output_mode = "reg_only";
+defparam \qout[6]~reg0 .register_cascade_mode = "off";
+defparam \qout[6]~reg0 .sum_lutc_input = "datac";
+defparam \qout[6]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_99
+cyclone_io \in[7]~I (
+	.datain(gnd),
+	.oe(gnd),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(\in~combout [7]),
+	.regout(),
+	.padio(in[7]));
+// synopsys translate_off
+defparam \in[7]~I .input_async_reset = "none";
+defparam \in[7]~I .input_power_up = "low";
+defparam \in[7]~I .input_register_mode = "none";
+defparam \in[7]~I .input_sync_reset = "none";
+defparam \in[7]~I .oe_async_reset = "none";
+defparam \in[7]~I .oe_power_up = "low";
+defparam \in[7]~I .oe_register_mode = "none";
+defparam \in[7]~I .oe_sync_reset = "none";
+defparam \in[7]~I .operation_mode = "input";
+defparam \in[7]~I .output_async_reset = "none";
+defparam \in[7]~I .output_power_up = "low";
+defparam \in[7]~I .output_register_mode = "none";
+defparam \in[7]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at LC_X12_Y10_N2
+cyclone_lcell \qout[7]~reg0 (
+// Equation(s):
+// \qout[7]~reg0_regout  = DFFEAS(GND, GLOBAL(\clk~combout ), !GLOBAL(\clear~combout ), , , \in~combout [7], , , VCC)
+
+	.clk(\clk~combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\in~combout [7]),
+	.datad(vcc),
+	.aclr(\clear~combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(),
+	.regout(\qout[7]~reg0_regout ),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \qout[7]~reg0 .lut_mask = "0000";
+defparam \qout[7]~reg0 .operation_mode = "normal";
+defparam \qout[7]~reg0 .output_mode = "reg_only";
+defparam \qout[7]~reg0 .register_cascade_mode = "off";
+defparam \qout[7]~reg0 .sum_lutc_input = "datac";
+defparam \qout[7]~reg0 .synch_mode = "on";
+// synopsys translate_on
+
+// atom is at PIN_85
+cyclone_io \qout[0]~I (
+	.datain(\qout[0]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[0]));
+// synopsys translate_off
+defparam \qout[0]~I .input_async_reset = "none";
+defparam \qout[0]~I .input_power_up = "low";
+defparam \qout[0]~I .input_register_mode = "none";
+defparam \qout[0]~I .input_sync_reset = "none";
+defparam \qout[0]~I .oe_async_reset = "none";
+defparam \qout[0]~I .oe_power_up = "low";
+defparam \qout[0]~I .oe_register_mode = "none";
+defparam \qout[0]~I .oe_sync_reset = "none";
+defparam \qout[0]~I .operation_mode = "output";
+defparam \qout[0]~I .output_async_reset = "none";
+defparam \qout[0]~I .output_power_up = "low";
+defparam \qout[0]~I .output_register_mode = "none";
+defparam \qout[0]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_49
+cyclone_io \qout[1]~I (
+	.datain(\qout[1]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[1]));
+// synopsys translate_off
+defparam \qout[1]~I .input_async_reset = "none";
+defparam \qout[1]~I .input_power_up = "low";
+defparam \qout[1]~I .input_register_mode = "none";
+defparam \qout[1]~I .input_sync_reset = "none";
+defparam \qout[1]~I .oe_async_reset = "none";
+defparam \qout[1]~I .oe_power_up = "low";
+defparam \qout[1]~I .oe_register_mode = "none";
+defparam \qout[1]~I .oe_sync_reset = "none";
+defparam \qout[1]~I .operation_mode = "output";
+defparam \qout[1]~I .output_async_reset = "none";
+defparam \qout[1]~I .output_power_up = "low";
+defparam \qout[1]~I .output_register_mode = "none";
+defparam \qout[1]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_73
+cyclone_io \qout[2]~I (
+	.datain(\qout[2]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[2]));
+// synopsys translate_off
+defparam \qout[2]~I .input_async_reset = "none";
+defparam \qout[2]~I .input_power_up = "low";
+defparam \qout[2]~I .input_register_mode = "none";
+defparam \qout[2]~I .input_sync_reset = "none";
+defparam \qout[2]~I .oe_async_reset = "none";
+defparam \qout[2]~I .oe_power_up = "low";
+defparam \qout[2]~I .oe_register_mode = "none";
+defparam \qout[2]~I .oe_sync_reset = "none";
+defparam \qout[2]~I .operation_mode = "output";
+defparam \qout[2]~I .output_async_reset = "none";
+defparam \qout[2]~I .output_power_up = "low";
+defparam \qout[2]~I .output_register_mode = "none";
+defparam \qout[2]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_144
+cyclone_io \qout[3]~I (
+	.datain(\qout[3]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[3]));
+// synopsys translate_off
+defparam \qout[3]~I .input_async_reset = "none";
+defparam \qout[3]~I .input_power_up = "low";
+defparam \qout[3]~I .input_register_mode = "none";
+defparam \qout[3]~I .input_sync_reset = "none";
+defparam \qout[3]~I .oe_async_reset = "none";
+defparam \qout[3]~I .oe_power_up = "low";
+defparam \qout[3]~I .oe_register_mode = "none";
+defparam \qout[3]~I .oe_sync_reset = "none";
+defparam \qout[3]~I .operation_mode = "output";
+defparam \qout[3]~I .output_async_reset = "none";
+defparam \qout[3]~I .output_power_up = "low";
+defparam \qout[3]~I .output_register_mode = "none";
+defparam \qout[3]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_26
+cyclone_io \qout[4]~I (
+	.datain(\qout[4]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[4]));
+// synopsys translate_off
+defparam \qout[4]~I .input_async_reset = "none";
+defparam \qout[4]~I .input_power_up = "low";
+defparam \qout[4]~I .input_register_mode = "none";
+defparam \qout[4]~I .input_sync_reset = "none";
+defparam \qout[4]~I .oe_async_reset = "none";
+defparam \qout[4]~I .oe_power_up = "low";
+defparam \qout[4]~I .oe_register_mode = "none";
+defparam \qout[4]~I .oe_sync_reset = "none";
+defparam \qout[4]~I .operation_mode = "output";
+defparam \qout[4]~I .output_async_reset = "none";
+defparam \qout[4]~I .output_power_up = "low";
+defparam \qout[4]~I .output_register_mode = "none";
+defparam \qout[4]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_140
+cyclone_io \qout[5]~I (
+	.datain(\qout[5]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[5]));
+// synopsys translate_off
+defparam \qout[5]~I .input_async_reset = "none";
+defparam \qout[5]~I .input_power_up = "low";
+defparam \qout[5]~I .input_register_mode = "none";
+defparam \qout[5]~I .input_sync_reset = "none";
+defparam \qout[5]~I .oe_async_reset = "none";
+defparam \qout[5]~I .oe_power_up = "low";
+defparam \qout[5]~I .oe_register_mode = "none";
+defparam \qout[5]~I .oe_sync_reset = "none";
+defparam \qout[5]~I .operation_mode = "output";
+defparam \qout[5]~I .output_async_reset = "none";
+defparam \qout[5]~I .output_power_up = "low";
+defparam \qout[5]~I .output_register_mode = "none";
+defparam \qout[5]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_4
+cyclone_io \qout[6]~I (
+	.datain(\qout[6]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[6]));
+// synopsys translate_off
+defparam \qout[6]~I .input_async_reset = "none";
+defparam \qout[6]~I .input_power_up = "low";
+defparam \qout[6]~I .input_register_mode = "none";
+defparam \qout[6]~I .input_sync_reset = "none";
+defparam \qout[6]~I .oe_async_reset = "none";
+defparam \qout[6]~I .oe_power_up = "low";
+defparam \qout[6]~I .oe_register_mode = "none";
+defparam \qout[6]~I .oe_sync_reset = "none";
+defparam \qout[6]~I .operation_mode = "output";
+defparam \qout[6]~I .output_async_reset = "none";
+defparam \qout[6]~I .output_power_up = "low";
+defparam \qout[6]~I .output_register_mode = "none";
+defparam \qout[6]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+// atom is at PIN_10
+cyclone_io \qout[7]~I (
+	.datain(\qout[7]~reg0_regout ),
+	.oe(vcc),
+	.outclk(gnd),
+	.outclkena(vcc),
+	.inclk(gnd),
+	.inclkena(vcc),
+	.areset(gnd),
+	.sreset(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.devoe(devoe),
+	.combout(),
+	.regout(),
+	.padio(qout[7]));
+// synopsys translate_off
+defparam \qout[7]~I .input_async_reset = "none";
+defparam \qout[7]~I .input_power_up = "low";
+defparam \qout[7]~I .input_register_mode = "none";
+defparam \qout[7]~I .input_sync_reset = "none";
+defparam \qout[7]~I .oe_async_reset = "none";
+defparam \qout[7]~I .oe_power_up = "low";
+defparam \qout[7]~I .oe_register_mode = "none";
+defparam \qout[7]~I .oe_sync_reset = "none";
+defparam \qout[7]~I .operation_mode = "output";
+defparam \qout[7]~I .output_async_reset = "none";
+defparam \qout[7]~I .output_power_up = "low";
+defparam \qout[7]~I .output_register_mode = "none";
+defparam \qout[7]~I .output_sync_reset = "none";
+// synopsys translate_on
+
+endmodule

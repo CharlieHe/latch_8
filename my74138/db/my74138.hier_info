@@ -1,0 +1,17 @@
+|my74138
+s[0] => Equal0.IN1
+s[1] => Equal0.IN2
+s[2] => Equal0.IN0
+in[0] => Decoder0.IN2
+in[1] => Decoder0.IN1
+in[2] => Decoder0.IN0
+out[0] <= out~7.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~6.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~5.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~3.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out~1.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
